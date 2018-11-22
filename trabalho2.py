@@ -82,10 +82,11 @@ while i==0 :
                             if estatus[carro] == 'disponivel':
                                 estatus[carro] = 'alugado'
                                 print('veículo alugado')
+                                alugados = alugados+1
                             else:
                                 print('veiculo não pode ser alugado, tente outro por favor')
                 
-            alugados = alugados+1
+            
         if  alRes == '2':
             data = (int)(input('Por quanto dias você deseja reservar o carro ? Máximo de 30 dias: '))
             carro =(int)(input('Digite o codigo do veiculo que deseja reservar: '))
@@ -97,9 +98,10 @@ while i==0 :
                             if estatus[carro] == 'disponivel':
                                 estatus[carro] = 'reservado'
                                 print('veículo reservado')
+                                reservados = reservados+1
                             else:
                                 print('veiculo não pode ser reservado, tente outro por favor')
-            reservados = reservados+1
+             
                             
     if resposta == 6:#passagem de  o tempo
         futuro=date.fromordinal(hoje.toordinal()+1)
